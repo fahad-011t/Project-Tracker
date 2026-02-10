@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar"></nav>
+    <div class="container">
+        <h1 id="welcome-msg" class="welcome-banner"></h1>
+
+        <div class="header-section">
+            <h2>My Projects</h2>
+            <button onclick="toggleModal('projectModal')" class="btn btn-success">
+                + Create New Project
+            </button>
+        </div>
+
+        <div id="project-list" class="grid-3"></div>
+
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <h3>Start New Project</h3>
+                <form id="create-project-form">
+                    <label>Project Title</label>
+                    <input type="text" id="p-title" required>
+                    
+                    <label>Description</label>
+                    <textarea id="p-desc" rows="3" required></textarea>
+
+                    <label>Project Deadline</label>
+                    <input type="date" id="p-deadline" required>
+
+                    <label>Other Members Usernames (comma separated)</label>
+                    <input type="text" id="p-members" placeholder="user1, user2, user3">
+                    <small style="display:block; margin-bottom:15px; color:#666;">Note: Members must have an existing account.</small>
+                    
+                    <div class="modal-footer">
+                        <button type="button" onclick="toggleModal('projectModal')" class="btn btn-danger flex-1">Cancel</button>
+                        <button type="submit" class="btn btn-success flex-2">Create Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="common.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Project-Tracker
+# Project-Work-Tracker
 
 ## Description
 Project Tracker is a web-based project management application that helps teams organize projects, assign tasks, track contributions, and monitor deadlines efficiently.  

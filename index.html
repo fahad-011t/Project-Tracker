@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Project Tracker</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-wrapper">
+        
+        <div class="auth-image">
+            <img src="LogIn Photo.png" alt="Login View" id="img-login" class="side-photo">
+    
+            <img src="Signup Photo.png" alt="Signup View" id="img-signup" class="side-photo hidden">
+    
+            <div class="image-overlay">
+                <h2 id="overlay-title">Welcome!</h2>
+                <p id="overlay-text">Manage your tasks and track team progress in real-time.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-container">
+            
+            <div id="login-card" class="auth-card">
+                <h2 class="auth-title" style="color: #4e73df;">Log In</h2>
+                <p class="auth-subtitle">Enter your credentials to access your workspace.</p>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Email or Username</label>
+                        <input type="text" id="l-input" placeholder="Enter email or username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="l-pass" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login to Dashboard</button>
+                </form>
+                
+                <p class="switch-text">
+                    New here? <span class="switch-link" onclick="switchView('signup')">Create an Account</span>
+                </p>
+            </div>
+
+            <div id="signup-card" class="auth-card hidden">
+                <h2 class="auth-title" style="color: #1cc88a;">Join Us</h2>
+                <p class="auth-subtitle">Start organizing your projects more efficiently today.</p>
+                
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="s-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="s-username" placeholder="johndoe123" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="s-email" placeholder="name@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="s-pass" placeholder="••••••••" required>
+                        <small class="password-hint">
+                            * Min 8 chars, 1 uppercase, 1 number, 1 symbol
+                        </small>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Create Account</button>
+                </form>
+                
+                <p class="switch-text">
+                    Already have an account? <span class="switch-link" onclick="switchView('login')">Login</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar"></nav>
+    <div class="container">
+        <div class="header-section">
+            <h2>Project Tasks</h2>
+            <button onclick="toggleModal('taskModal')" class="btn btn-primary">+ Assign Task</button>
+        </div>
+
+        <div id="task-list" class="grid-3"></div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3>Assign New Task</h3>
+            <form id="add-task-form">
+                <label for="t-title">Title</label> 
+                <input type="text" id="t-title" required>
+                
+                <label for="t-type">Type</label>
+                <input type="text" id="t-type" list="type-options" placeholder="Select or type custom type..." required>
+                <datalist id="type-options">
+                    <option value="Coding">
+                    <option value="Design">
+                    <option value="Documentation">
+                    <option value="Testing">
+                    <option value="Research">
+                    <option value="QA Review">
+                </datalist>
+
+                <label for="assignedTo">Assign To</label> 
+                <select id="assignedTo"></select>
+
+                <label for="t-min-hours">Minimum Hours Required</label>
+                <input type="number" id="t-min-hours" min="1" placeholder="e.g. 5" required>
+
+                <div class="grid-2">
+                    <div>
+                        <label for="t-priority">Priority</label>
+                        <select id="t-priority">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="t-deadline">Due Date</label>
+                        <input type="date" id="t-deadline" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" onclick="closeAndClearTaskModal()" class="btn btn-danger flex-1">Cancel</button>
+                    <button type="submit" class="btn btn-success flex-2">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="common.js"></script>
+    <script src="tasks.js"></script>
+</body>
+</html>
